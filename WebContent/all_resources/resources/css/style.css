@@ -1,0 +1,377 @@
+/*---------------------*/
+/*---Default Styles---*/
+/*-------------------*/
+*{
+    font-size: 20px;
+    margin : 0;
+    padding: 0; 
+    font-family: 'Lato',sans-serif,'Arial';
+    box-sizing: border-box;
+}
+
+*:focus{
+    outline: none;   
+}
+
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato',sans-serif,'Arial';
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+    font-size: 20px;
+    position: relative;
+    display: block;
+    zoom:0.55;
+    overflow-y: scroll;
+}
+
+body{
+    background-color: white;
+    overflow: hidden;
+}
+
+section{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /*    height: 100vh;*/
+} 
+
+h1{
+    text-align: center;    
+}
+
+h2 {
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 300;
+}
+h3{
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 30px;    
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 145%;
+}
+
+h4{
+    display: block;
+    color: #ff7600;
+    text-align: left;
+}
+
+
+
+h2:after{
+    display: block;
+    background-color: #006FA1;
+    content: " ";
+    height: 4px;
+    width: 130px;
+    margin:20px auto;
+    margin-bottom: 30px;
+}
+
+.white{
+    color: white;
+}
+
+.row{
+    width: 1440;
+    text-align: center;
+}
+
+.center{
+    margin:0 auto;
+}
+
+/*-------------------------Links-------------------------*/
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*-------------------------Texts-------------------------*/
+p {
+    text-rendering: optimizeLegibility;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 145%;
+}
+span{
+    text-rendering: optimizeLegibility;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 145%;
+}
+
+/*-------------------------end of Texts-------------------------*/
+
+/*-------------------------Immages-------------------------*/
+img{
+    transition: all 0.3s cubic-bezier(.75,.92,0,0);
+}
+
+img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+/*-------------------------end of Immages-------------------------*/
+/*------------------------------------------*/
+/*---Navbar---*/
+/*------------------------------------------*/
+#navbar {
+    padding: 0px 40px;
+}
+
+nav{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: #fff;
+    z-index: 100000;
+    box-shadow: 5px 5px 20px #989898;
+    zoom:1;
+}
+
+nav img{
+    height: 120px;
+    width: 400px;
+    /*    border: 2px solid red;*/
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #ebe6e7;
+    /*    border: 1px solid #db152c;*/
+    /*    opacity: 0.8;*/
+}
+
+/*------------------------------------------*/
+/*-------Footer---*/
+/*-----------------------------------------*/
+#footer {
+    position: fixed;
+    z-index:1;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    bottom:0;
+    background-color:black;
+    padding-top :60px;
+    padding-bottom :60px;
+    padding-left :10%;
+    padding-right :10%;
+}
+
+#coopirate{
+    float: right;
+    color: white;
+}
+
+/*------------------------------------------*/
+/*---Loader---*/
+/*------------------------------------------*/
+.loader{
+    width: 100%;
+    height: 2000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background: url('img/page-loader.gif') 50% 50% no-repeat #fff;
+    bacground-size:cover;
+}
+/*------------------------------------------*/
+/*---Wraper---*/
+/*------------------------------------------*/
+#wraper{
+	visibility:hidden;
+    position: relative;
+    height: auto;
+    padding-top: 20px;
+    z-index:4;
+    margin-bottom:350px;
+    margin-top: 120px;
+    position: relative;
+    background-color: white;
+    padding-bottom:0px;
+    box-shadow: 5px 5px 20px #989898;
+}
+/*------------------------- end of Wraper -------------------------*/
+
+/*------------------------- Effects -------------------------*/
+
+/*Leves affeqct*/
+@keyframes leaves{
+    0% {
+        transform: scale(-1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*throw effect*/
+@keyframes load-cube{
+    0% {
+        transform-origin:  1000px 2000px -2000px;
+        transform: rotateX(100deg) rotateY(20deg);
+        /*        transform: scale(0);*/
+    }100% {
+        transform: scale(1);
+    }
+}
+
+.leaves{
+    animation: 1.5s cubic-bezier(.75,.92,0,0) 0s 1 leaves;
+    opacity: 1;
+}
+
+.load-cube{
+    animation: 2s cubic-bezier(.75,.92,0,0) 0s 1 load-cube;
+}
+
+/*box for each information box (using for animations)*/
+.box{
+    border-radius: 30px;
+}
+
+/*------------------------- end of Effects -------------------------*/
+/*------------------------------------------*/
+/*-------Home Page---*/
+/*-----------------------------------------*/
+/* eroor messages class*/
+#message {
+    color: red;
+}
+
+/*search form section*/
+#search{
+    display: block;
+    text-align: center;
+
+}
+
+/*filed where information is filed*/
+#search  .search-filed{
+    display: inline-block;
+    width: 80%;
+    height: 100px;
+    font-size: 40px;
+    padding: 20px;
+}
+
+/*links in links result*/
+.search-btn{
+    float: none;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 100px;
+    background-color: cadetblue;
+    color: white;
+    font-size:40px;
+    transition: all 0.7s;
+}
+
+.search-btn:hover{
+    transform: scale(1.1);
+}
+
+.search-btn:hover{
+	transform:scale(1.2);
+}
+/*------------------------------------------*/
+/*-------Result Page---*/
+/*-----------------------------------------*/
+
+/*-------------------switchers----------------*/
+/*wraper of switcher between immages and links */
+#links-img-switcher{
+    display: block;
+    text-align: center;
+}
+
+#links-img-switcher a{
+    display: inline-block;
+    width: 40%;
+    margin: 0px 10px;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e3e3e3;
+    font-weight: 300;
+    font-size: 40px;
+    border-bottom: 5px solid red;
+    transition: all 0.5s;
+}
+
+#links-img-switcher a:hover{
+    transform: scale(1.02);
+}
+
+
+
+
+
+
+#imgs-switch{
+    opacity: 0.3
+}
+
+/*-------------------immages and links wrapers-------------------*/
+#immages,#links{
+    text-align: center;
+}
+
+/*-------------------immage result wraper-------------------*/
+#immages{display: none;}
+
+/*each img in immages wraper*/
+#immages img{
+    display: inline-block;
+	border:4px solid #dddddd;
+    width: 500px;
+    height: 500px;
+    z-index: 1;
+    opacity: 0.7;
+    margin:20px 10px;
+}
+
+#immages img:hover{
+    opacity: 1;
+    z-index: 11111;
+}
+
+/*--------------------------links result wraper----------------------*/
+
+/*each link in wraper*/
+#links a{
+    padding: 20px;
+    display: block;
+    width: 70%;
+    color: white;
+    font-weight: 600;
+    font-size: 50px;
+    background-image: -webkit-linear-gradient(top, #7c1212, #d63542);
+    margin: 20px auto;
+    transition: all 0.3s;
+}
+#links a:hover{
+    opacity: 0.8;
+}
+
+
