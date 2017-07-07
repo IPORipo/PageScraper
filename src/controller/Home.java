@@ -16,11 +16,6 @@ import org.jsoup.select.Elements;
 
 import services.ScraperFunctions;
 
-//import org.w3c.dom.Element;
-
-/**
- * Servlet implementation class simpleparser
- */
 @WebServlet("/home")
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
